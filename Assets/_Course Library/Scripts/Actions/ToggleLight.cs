@@ -3,17 +3,11 @@
 /// <summary>
 /// Toggles a light
 /// </summary>
-[RequireComponent(typeof(Light))]
 public class ToggleLight : MonoBehaviour
 {
     [Tooltip("Controls the state of the light")]
     public bool isOn = false;
-    private Light currentLight = null;
-
-    private void Awake()
-    {
-        currentLight = GetComponent<Light>();
-    }
+    public Light currentLight;
 
     private void Start()
     {
@@ -36,11 +30,5 @@ public class ToggleLight : MonoBehaviour
     {
         isOn = !isOn;
         currentLight.enabled = isOn;
-    }
-
-    private void OnValidate()
-    {
-        if (currentLight)
-            currentLight.enabled = isOn;
     }
 }
