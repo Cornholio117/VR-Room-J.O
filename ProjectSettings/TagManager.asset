@@ -5,6 +5,17 @@ TagManager:
   serializedVersion: 2
   tags:
   - Lighter
+  - Dart
+  - Sun
+  - Fireplace Canvas
+  - Candle1
+  - Candle2
+  - Candle3
+  - Candle4
+  - Candle5
+  - Candle6
+  - Candle7
+  - Candle8
   layers:
   - Default
   - TransparentFX
@@ -12,10 +23,10 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
+  - Player
+  - Room Colliders
+  - Sun
+  - Fireplace Canvas
   - 
   - 
   - 
