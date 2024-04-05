@@ -16,6 +16,7 @@ TagManager:
   - Candle6
   - Candle7
   - Candle8
+  - Outline
   layers:
   - Default
   - TransparentFX

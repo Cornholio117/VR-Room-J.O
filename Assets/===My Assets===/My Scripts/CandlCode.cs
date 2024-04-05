@@ -8,11 +8,13 @@ public class CandlCode : MonoBehaviour
     public ParticleSystem firePp1, firePp2, firePp3, firePp4, firePp5, firePp6, firePp7, firePp8;
     public AudioSource Yay;
 
-    int correctOrder = 0;
-    bool candle1, candle2, candle3, candle4, candle5, candle6, candle7, candle8;
+    private int correctOrder = 0;
+    private bool candle1, candle2, candle3, candle4, candle5, candle6, candle7;
 
-
-
+    private void Start()
+    {
+        int order = correctOrder;
+    }
     private void OnTriggerEnter(Collider other)
     {
         if(other.tag == "Candle1")
@@ -53,7 +55,6 @@ public class CandlCode : MonoBehaviour
         if (other.tag == "Candle8" && candle7 == true)
         {
             correctOrder = 8;
-            candle8 = true;
             win();
         }
     }
