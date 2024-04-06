@@ -17,6 +17,11 @@ TagManager:
   - Candle7
   - Candle8
   - Outline
+  - Box
+  - Trail
+  - Captain
+  - Witch
+  - Cowboy
   layers:
   - Default
   - TransparentFX

@@ -9,6 +9,7 @@ public class Flashlight : XRGrabInteractable
     public Light spotlight;
     public Transform beamOrigin;
     public Animator paintingOutline;
+    public GameObject leftSocket;
 
     [Header("Flashlight Haptics")]
     public float power = 0.25f;
@@ -43,6 +44,7 @@ public class Flashlight : XRGrabInteractable
             worldHit = hit.point;
 
             paintingOutline.SetTrigger("Light");
+            leftSocket.GetComponent<XRSocketInteractor>().enabled = true;
         }
     }
     public override void ProcessInteractable(XRInteractionUpdateOrder.UpdatePhase updatePhase)
