@@ -1,15 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class HatChecker : MonoBehaviour
 {
+    [Header("Which Socket")]
     [SerializeField] bool isCaptain;
     [SerializeField] bool isWitch;
     [SerializeField] bool isCowboy;
 
+    [Header("Win Data")]
     public Rigidbody leftDoor;
     public Rigidbody rightDoor;
+    public GameObject flashlight;
+    public GameObject lockIcon;
+    public Material unlocked;
 
     public static bool correctCaptain = false;
     public static bool correctWitch = false;
@@ -23,7 +29,7 @@ public class HatChecker : MonoBehaviour
             correctCaptain = true;
             Debug.Log("Captain is correct: " + correctCaptain);
         }
-        else if (other.tag == "Captain" && isCaptain != true)
+        if (other.tag == "Captain" && isCaptain != true)
         {
             correctCaptain = false;
         }
@@ -33,7 +39,7 @@ public class HatChecker : MonoBehaviour
             correctWitch = true;
             Debug.Log("Witch is correct: " + correctWitch);
         }
-        else if (other.tag == "Witch" && isWitch != true)
+        if (other.tag == "Witch" && isWitch != true)
         {
             correctWitch = false;
         }
@@ -43,7 +49,7 @@ public class HatChecker : MonoBehaviour
             correctCowboy = true;
             Debug.Log("Cowboy is correct: " + correctCowboy);
         }
-        else if (other.tag == "Cowboy" && isCowboy != true)
+        if (other.tag == "Cowboy" && isCowboy != true)
         {
             correctCowboy = false;
         }
@@ -54,6 +60,8 @@ public class HatChecker : MonoBehaviour
         {
             leftDoor.isKinematic = false;
             rightDoor.isKinematic = false;
+            flashlight.GetComponent<Flashlight>().enabled = true;
+            lockIcon.GetComponent<MeshRenderer>().material = unlocked;
             Debug.Log("Cabinet is open!");
         }
     }

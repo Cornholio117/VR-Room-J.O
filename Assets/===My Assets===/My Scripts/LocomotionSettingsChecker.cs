@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class LocomotionSettingsChecker : MonoBehaviour
 {
+    [Header("Locomotion Settings")]
     public Toggle Snap;
     public Toggle Continus;
 

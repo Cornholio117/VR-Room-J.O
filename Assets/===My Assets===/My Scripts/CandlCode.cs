@@ -5,7 +5,10 @@ using UnityEngine;
 
 public class CandlCode : MonoBehaviour
 {
+    [Header("Candle Fire PP")]
     public ParticleSystem firePp1, firePp2, firePp3, firePp4, firePp5, firePp6, firePp7, firePp8;
+
+    [Header("Win Data")]
     public AudioSource Yay;
 
     private int correctOrder = 0;

@@ -22,6 +22,9 @@ TagManager:
   - Captain
   - Witch
   - Cowboy
+  - Hand
+  - Apple
+  - Mouth
   layers:
   - Default
   - TransparentFX

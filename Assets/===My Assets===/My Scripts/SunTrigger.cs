@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class SunTrigger : MonoBehaviour
 {
+    [Header("Sun Trigger Data")]
     [SerializeField] int fireOrder = 0;
     [SerializeField] Material fireMat;
     public Color[] colorsList;
