@@ -26,6 +26,7 @@ TagManager:
   - Apple
   - Mouth
   - Respawner
+  - Watering
   layers:
   - Default
   - TransparentFX
@@ -37,9 +38,9 @@ TagManager:
   - Room Colliders
   - Sun
   - Fireplace Canvas
-  - 
-  - 
-  - 
+  - Rug
+  - Watering Can
+  - Statics
   - 
   - 
   - 

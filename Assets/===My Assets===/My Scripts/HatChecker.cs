@@ -14,8 +14,10 @@ public class HatChecker : MonoBehaviour
     public Rigidbody leftDoor;
     public Rigidbody rightDoor;
     public GameObject flashlight;
+    public GameObject plantHints;
     public GameObject lockIcon;
     public Material unlocked;
+    public AudioSource chestUnlock;
 
     public static bool correctCaptain = false;
     public static bool correctWitch = false;
@@ -62,6 +64,9 @@ public class HatChecker : MonoBehaviour
             rightDoor.isKinematic = false;
             flashlight.GetComponent<Flashlight>().enabled = true;
             lockIcon.GetComponent<MeshRenderer>().material = unlocked;
+            plantHints.GetComponent<PlantHints>().EnablePhase2();
+            plantHints.GetComponent<PlantHints>().DisablePhase1();
+            chestUnlock.Play();
             Debug.Log("Cabinet is open!");
         }
     }
