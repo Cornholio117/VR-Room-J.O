@@ -69,6 +69,7 @@ public class SunTrigger : MonoBehaviour
                 fireOrder = 1;
                 fireMat.color = colorsList[1];
                 fireplaceLight.color = colorsList[1];
+                hitOrder.text = "1";
             }
         }
     }

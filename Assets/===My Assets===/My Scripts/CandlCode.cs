@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.Playables;
 
 public class CandlCode : MonoBehaviour
 {
@@ -9,7 +10,7 @@ public class CandlCode : MonoBehaviour
     public ParticleSystem firePp1, firePp2, firePp3, firePp4, firePp5, firePp6, firePp7, firePp8;
 
     [Header("Win Data")]
-    public AudioSource Yay;
+    public PlayableDirector endTimeline;
 
     private int correctOrder = 0;
     private bool candle1, candle2, candle3, candle4, candle5, candle6, candle7;
@@ -76,7 +77,7 @@ public class CandlCode : MonoBehaviour
 
     public void win()
     {
-            Yay.Play();
+            endTimeline.Play();
     }
 
     public void Checker1()

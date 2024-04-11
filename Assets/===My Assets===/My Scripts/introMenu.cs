@@ -20,7 +20,9 @@ public class introMenu : MonoBehaviour
     public Material normalMAT;
 
     public GameObject backButton;
+    public GameObject creditsButton;
     public TextMeshProUGUI nextButtonText;
+
 
 
     [SerializeField] int page = 1;
@@ -31,6 +33,7 @@ public class introMenu : MonoBehaviour
         if (page == 1)
         {
             backButton.SetActive(false);
+            creditsButton.SetActive(true);
             primaryButtonLeft.material = glowMAT;
             primaryButtonRight.material = glowMAT;
             secondaryButtonLeft.material = normalMAT;
@@ -45,6 +48,7 @@ public class introMenu : MonoBehaviour
         if(page == 2)
         {
             backButton.SetActive(true);
+            creditsButton.SetActive(false);
             primaryButtonLeft.material = normalMAT;
             primaryButtonRight.material = normalMAT;
             secondaryButtonLeft.material = normalMAT;
@@ -104,6 +108,7 @@ public class introMenu : MonoBehaviour
         if (page == 1)
         {
             backButton.SetActive(false);
+            creditsButton.SetActive(true);
             primaryButtonLeft.material = glowMAT;
             primaryButtonRight.material = glowMAT;
             secondaryButtonLeft.material = normalMAT;
@@ -118,6 +123,7 @@ public class introMenu : MonoBehaviour
         if (page == 2)
         {
             backButton.SetActive(true);
+            creditsButton.SetActive(false);
             primaryButtonLeft.material = normalMAT;
             primaryButtonRight.material = normalMAT;
             secondaryButtonLeft.material = normalMAT;
